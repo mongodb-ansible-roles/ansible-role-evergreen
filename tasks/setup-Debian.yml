@@ -1,0 +1,6 @@
+---
+- name: Copy evergreen.yml
+  template:
+    src: evergreen.yml
+    dest: "{{ ansible_env.HOME }}/.evergreen.yml"
+    mode: "0600"
