@@ -10,6 +10,13 @@ Requirements
 
 None
 
+Role Variables
+--------------
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-------:|:--------:|
+| evergreen\_user | Optional user to set up evergreen config | string | "{{ ansible\_user ||" | no |
+
 Dependencies
 ------------
 
