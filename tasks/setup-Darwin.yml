@@ -4,4 +4,4 @@
     src: evergreen.yml
     dest: "{{ ansible_env.HOME }}/.evergreen.yml"
     mode: "0600"
-    owner: "{{ evergreen_user | default(ansible_user) }}"
+    owner: "{{ evergreen_user | default(ansible_user_id) }}"
