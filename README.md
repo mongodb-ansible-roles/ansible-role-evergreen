@@ -15,7 +15,7 @@ Role Variables
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
-| evergreen\_user | Optional user to set up evergreen config | string | "{{ ansible\_user ||" | no |
+| evergreen\_override\_user | Optional user to set up evergreen config | string | "{{ ansible\_user\_id ||" | no |
 
 Dependencies
 ------------
@@ -28,7 +28,9 @@ Example Playbook
 ```yaml
 - hosts: all
   roles:
+    - role: ansible-role-evergreen
       vars:
+        evergreen_override_user: "evergreen"
 ```
 
 Development
