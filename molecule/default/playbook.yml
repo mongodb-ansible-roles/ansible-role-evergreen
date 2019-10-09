@@ -4,3 +4,5 @@
   hosts: all
   roles:
     - role: ansible-role-evergreen
+      vars:
+        evergreen_override_user: root
