@@ -1,7 +1,0 @@
----
-- name: Copy evergreen.yml
-  template:
-    src: evergreen.yml
-    dest: "~{{ evergreen_user }}/.evergreen.yml"
-    mode: "0600"
-    owner: "{{ evergreen_user }}"

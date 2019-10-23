@@ -1,6 +1,8 @@
 ---
-- include_tasks: setup-Debian.yml
-  when: ansible_os_family == "Debian"
-
-- include_tasks: setup-Darwin.yml
-  when: ansible_os_family == "Darwin"
+- name: Copy evergreen.yml
+  become: true
+  template:
+    src: evergreen.yml
+    dest: "~{{ evergreen_user }}/.evergreen.yml"
+    mode: "0600"
+    owner: "{{ evergreen_user }}"
